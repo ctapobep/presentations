@@ -1,0 +1,85 @@
+\documentclass{beamer}
+\begin{document}
+\begin{frame}
+How does ideal project look like?
+\end{frame}
+\begin{frame}
+  \frametitle{Ideal Project}
+  As a \textbf{Business Owner} I'd like to have releases
+  \begin{description}
+   \item[often] so that I quickly understand whether market accepts my ideas 
+   \item[low-risk] so that I don't loose money if something goes wrong
+  \end{description}
+\end{frame}
+\begin{frame}
+  \frametitle{Ideal Project}
+  As a \textbf{Developer} I'd like to have releases
+  \begin{description}
+   \item[often] so that the risk of fail doesn't grow
+   \item[often2] so that I get satisfaction from having results
+   \item[low-risk] so that I don't overtime after failed release
+   \item[quick] so that I don't do routine all the time
+  \end{description}
+\end{frame}
+\begin{frame}
+ \frametitle{Usual Project}
+ \begin{itemize}
+   \item Interval between releases is bigger than a month
+   \item Release is manual and requires release instructions
+   \item Release is stressful and risky
+   \item Release procedure takes hours, they are routine
+   \item Often there are failures that require manual steps to rollback
+ \end{itemize}
+\end{frame}
+\begin{frame}
+  What does prevent us from building an Ideal Project?
+\end{frame}
+\begin{frame}
+  \frametitle{Why do we fail?}
+  \begin{itemize}
+    \item Regression takes ages
+    \item Doing big changes
+    \item Manual Deployment, Rollback
+    \item Some steps in the process take a lot of time (testing for instance)
+    \item Complicated environment
+    \item Previous failures, risks and stress that postope releases
+    \item Corporate policies
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{Continuous Delivery to rescue}
+  CD touches a bunch of aspects related to the software process:
+  \begin{itemize}
+    \item \textbf{Deployment Pipeline}
+    \item Automated Deployment and Rollbacks
+    \item Automated Functional Tests
+    \item Configuration Management
+    \item Continuous Integration
+    \item Branching Strategies
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  Deployment Pipeline represents a pipe of CI steps we need to pass in order to achieve release.
+\end{frame}
+\begin{frame}
+  \frametitle{Commit == binary}
+  \textbf{Each} commit results in a binary file that is reused on all other steps.
+
+  Possible obsticles:
+  \begin{itemize}
+    \item Binary is configured on build phase
+    \item Complexity of configuration
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{What's cool about Deployment Pipelines}
+  \begin{itemize}
+    \item Build cycle becomes faster
+    \item You don't have deployment errors
+    \item Deployment process is always documented and up-to-date
+    \item If you have deployment errors, you can easily find them
+    \item You're sure you didn't pass bugs because of automated functional tests
+  \end{itemize}
+\end{frame}
+\end{document}
+
