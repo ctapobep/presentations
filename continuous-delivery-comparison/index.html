@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>reveal.js - The HTML Presentation Framework</title>
+  <title>Continuous Delivery on Practice</title>
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
 
@@ -11,7 +11,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="css/reveal.min.css">
-  <link rel="stylesheet" href="css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="css/custom.css">
   <!-- For syntax highlighting -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
   <!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -21,6 +22,7 @@
 
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
+  <script src="js/custom.js"></script>
   <![endif]-->
 </head>
 
@@ -39,19 +41,84 @@
 </section>
 
 <section>
-  <h2>Heads Up</h2>
-
-  <p>
-    reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-    support for CSS 3D transforms to see it in its full glory.
-  </p>
-
-  <aside class="notes">
-    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker
-    notes window (hit 's' on your keyboard).
-  </aside>
+  <h2>CD Affects</h2>
+  <ul>
+    <li class="fragment">How you communicate</li>
+    <li class="fragment">How you git</li>
+    <li class="fragment">How you configure</li>
+    <li class="fragment">How you build & deploy</li>
+    <li class="fragment">How you test</li>
+    <li class="fragment">How you release</li>
+  </ul>
 </section>
+<section>
+  <h2>CD Depends On</h2>
+  <ul>
+    <li class="fragment">Team size & distribution</li>
+    <li class="fragment">Dev Process</li>
+    <li class="fragment">Team qualification</li>
+    <li class="fragment">...</li>
+  </ul>
+</section>
+<section>
+  <section>
+    <h2>Sample Projects</h2>
+    <div class="gd-logo">
+      <img src="img/gd-logo.png"/>
+    </div>
+    <div class="jtalks-logo">
+      <img src="img/jtalks-logo.jpg"/>
+    </div>
+  </section>
+  <section title="Projects Overview">
+    <div class="comparison-header">
+      <div class="gd-comparison">
+        <img src="img/gd-logo.png"/>
+      </div>
+      <div class="jtalks-comparison">
+        <img src="img/jtalks-logo.jpg"/>
+      </div>
+    </div>
+    <div class="comparison-content">
+      <script>
+        Comparison = function () {
+          this.withRows = function (rows) {
+            rows.forEach(function (row) {
+              return "<div>" + row[0] + "</div>" + "<div>" + row[1] + "</div>" + "<div>" + row[2] + "</div>"
+            })
+          }
+        };
 
+        var comparison = new Comparison();
+        var generatedHtml = comparison.prototype.withRows([
+          ["hey1", "hey2", "hey3"],
+          ["hello1", 'hello2', 'hello3']
+        ]);
+        console.log(generatedHtml)
+      </script>
+      <div class="comparison-row">
+        <div class="gd-comparison">Closed Source</div>
+        <div class="jtalks-comparison">Open Source</div>
+      </div>
+      <div class="comparison-row">
+        <div class="gd-comparison">Dozens of components</div>
+        <div class="jtalks-comparison">3 components</div>
+      </div>
+      <div class="comparison-row">
+        <div class="gd-comparison">Dozens of developers, ~10 QA, 8 DevOps</div>
+        <div class="jtalks-comparison">~8 developers, ~8 QA, 0.5 DevOps</div>
+      </div>
+      <div class="comparison-row">
+        <div class="gd-comparison">EARs + Weblogic</div>
+        <div class="jtalks-comparison">WARs + Tomcat</div>
+      </div>
+      <div class="comparison-row">
+        <div class="gd-comparison">Oracle DB + Coherence</div>
+        <div class="jtalks-comparison">MySQL</div>
+      </div>
+    </div>
+  </section>
+</section>
 <!-- Example of nested vertical slides -->
 <section>
   <section>

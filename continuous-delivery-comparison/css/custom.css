@@ -1,0 +1,28 @@
+.reveal section img {
+    border: none;
+    box-shadow: 0 0 0;
+}
+
+.gd-logo {
+    float: left;
+}
+
+.jtalks-logo div {
+
+}
+
+.gd-logo > img {
+    margin-top: 200px;
+    width: 350px;
+    height: 55px;
+}
+
+.gd-comparison {
+    float: left;
+    width: 49%;
+}
+
+.jtalks-comparison > img {
+    width: 100px;
+    height: 100px;
+}
