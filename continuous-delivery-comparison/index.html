@@ -12,14 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/beige.css" id="theme">
-  <link rel="stylesheet" href="css/custom.css">
   <!-- For syntax highlighting -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
   <!-- If the query includes 'print-pdf', use the PDF print sheet -->
   <script>
     document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
   </script>
-
+  <link rel="stylesheet" href="css/custom.css">
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <script src="js/custom.js"></script>
@@ -63,6 +62,7 @@
 <section>
   <section>
     <h2>Sample Projects</h2>
+
     <div class="gd-logo">
       <img src="img/gd-logo.png"/>
     </div>
@@ -80,22 +80,6 @@
       </div>
     </div>
     <div class="comparison-content">
-      <script>
-        Comparison = function () {
-          this.withRows = function (rows) {
-            rows.forEach(function (row) {
-              return "<div>" + row[0] + "</div>" + "<div>" + row[1] + "</div>" + "<div>" + row[2] + "</div>"
-            })
-          }
-        };
-
-        var comparison = new Comparison();
-        var generatedHtml = comparison.prototype.withRows([
-          ["hey1", "hey2", "hey3"],
-          ["hello1", 'hello2', 'hello3']
-        ]);
-        console.log(generatedHtml)
-      </script>
       <div class="comparison-row">
         <div class="gd-comparison">Closed Source</div>
         <div class="jtalks-comparison">Open Source</div>
@@ -105,7 +89,11 @@
         <div class="jtalks-comparison">3 components</div>
       </div>
       <div class="comparison-row">
-        <div class="gd-comparison">Dozens of developers, ~10 QA, 8 DevOps</div>
+        <div class="gd-comparison">Java</div>
+        <div class="jtalks-comparison">Java &amp; Ruby</div>
+      </div>
+      <div class="comparison-row">
+        <div class="gd-comparison">Dozens of developers, dozen of QA and DevOps</div>
         <div class="jtalks-comparison">~8 developers, ~8 QA, 0.5 DevOps</div>
       </div>
       <div class="comparison-row">
@@ -119,151 +107,122 @@
     </div>
   </section>
 </section>
-<!-- Example of nested vertical slides -->
 <section>
-  <section>
-    <h2>Vertical Slides</h2>
-
-    <p>
-      Slides can be nested inside of other slides,
-      try pressing <a href="#" class="navigate-down">down</a>.
-    </p>
-    <a href="#" class="image navigate-down">
-      <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-    </a>
-  </section>
-  <section>
-    <h2>Basement Level 1</h2>
-
-    <p>Press down or up to navigate.</p>
-  </section>
-  <section>
-    <h2>Basement Level 2</h2>
-
-    <p>Cornify</p>
-    <a class="test" href="http://cornify.com">
-      <img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-    </a>
-  </section>
-  <section>
-    <h2>Basement Level 3</h2>
-
-    <p>That's it, time to go back up.</p>
-    <a href="#/2" class="image">
-      <img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow"
-           style="-webkit-transform: rotate(180deg);">
-    </a>
-  </section>
-</section>
-
-<section>
-  <h2>Slides</h2>
-
-  <p>
-    Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a
-      href="http://slid.es" target="_blank">http://slid.es</a>.
-  </p>
-</section>
-
-<section>
-  <h2>Point of View</h2>
-
-  <p>
-    Press <strong>ESC</strong> to enter the slide overview.
-  </p>
-
-  <p>
-    Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt
-    + click anywhere to zoom back out.
-  </p>
-</section>
-
-<section>
-  <h2>Works in Mobile Safari</h2>
-
-  <p>
-    Try it out! You can swipe through the slides and pinch your way to the overview.
-  </p>
-</section>
-
-<section>
-  <h2>Marvelous Unordered List</h2>
-  <ul>
-    <li>No order here</li>
-    <li>Or here</li>
-    <li>Or here</li>
-    <li>Or here</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Fantastic Ordered List</h2>
+  <h2>Dev Cycle @ GD</h2>
   <ol>
-    <li>One is smaller than...</li>
-    <li>Two is smaller than...</li>
-    <li>Three!</li>
+    <li>Commit</li>
+    <li>Onboarding Pipeline, building & uploading artifacts</li>
+    <li>Deployment Pipeline by request</li>
+    <li>Manual Release</li>
   </ol>
 </section>
-
-<section data-markdown>
-  <script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-
-
-
-
-
-  </script>
+<section>
+  <h2>Dev Cycle @ JTalks</h2>
+  <ol>
+    <li>Commit</li>
+    <li>Build & Upload</li>
+    <li>Deployment Pipeline to DEV automatically</li>
+    <li>Deployment Pipeline to UAT, PREPROD, PROD by request</li>
+    <li>Automatic Release</li>
+  </ol>
 </section>
-
-<section id="transitions">
-  <h2>Transition Styles</h2>
-
-  <p>
-    You can select from different transitions, like: <br>
-    <a href="?transition=cube#/transitions">Cube</a> -
-    <a href="?transition=page#/transitions">Page</a> -
-    <a href="?transition=concave#/transitions">Concave</a> -
-    <a href="?transition=zoom#/transitions">Zoom</a> -
-    <a href="?transition=linear#/transitions">Linear</a> -
-    <a href="?transition=fade#/transitions">Fade</a> -
-    <a href="?transition=none#/transitions">None</a> -
-    <a href="?#/transitions">Default</a>
-  </p>
+<section title="Projects Overview">
+  <section>
+    <h2>Git @ GD</h2>
+    <img src="gitflow"/>
+  </section>
+  <section>
+    <h2>Pros</h2>
+    <ul>
+      <li>Dev branch is always releasable</li>
+      <li>No conflicts during feature development</li>
+      <li>Code is always reviewed</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Cons</h2>
+    <ul>
+      <li>Merges get bigger</li>
+      <li>Late integration</li>
+      <li>CI infrastructure to support branches</li>
+      <li>Additional education of people</li>
+      <li>Additional efforts and discipline</li>
+      <li>People get confused because of too many branches</li>
+    </ul>
+  </section>
 </section>
-
-<section id="themes">
-  <h2>Themes</h2>
-
-  <p>
-    Reveal.js comes with a few themes built in: <br>
-    <a href="?theme=sky#/themes">Sky</a> -
-    <a href="?theme=beige#/themes">Beige</a> -
-    <a href="?theme=simple#/themes">Simple</a> -
-    <a href="?theme=serif#/themes">Serif</a> -
-    <a href="?theme=night#/themes">Night</a> -
-    <a href="?#/themes">Default</a>
-  </p>
-
-  <p>
-    <small>
-      * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme
-      in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-    </small>
-  </p>
+<section>
+  <section>
+    <h2>Git @ JTalks</h2>
+    <img src="jtalks-git"/>
+  </section>
+  <section>
+    <h2>Pros</h2>
+    <ul>
+      <li>No big merges</li>
+      <li>Small changes are easier to rollback</li>
+      <li>Early integration</li>
+      <li>Simple</li>
+      <li>Team members always know the current state</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Cons</h2>
+    <ul>
+      <li>People spoil the only working branch</li>
+      <li>Risk to introduce bugs in the end of iteration</li>
+      <li>Code is not systematically reviewed</li>
+    </ul>
+  </section>
 </section>
-
+<section>
+  <h2>CI Server @ GD</h2>
+  <ul>
+    <li>Hundreds of Jobs</li>
+    <li>Jobs that generate jobs</li>
+    <li>Non-straightforward pipelines</li>
+  </ul>
+</section>
+<section>
+<section>
+  <h2>CI Server @ JTalks</h2>
+  <ul>
+    <li>Pipeline per project</li>
+    <li>Pipelines are straightforward</li>
+  </ul>
+</section>
+<section>
+  <h2>Artifact Repository @ GD</h2>
+  <ul>
+    <li>Only 'stable' versions, no snapshots</li>
+    <li>Sensitive/non-sensitive repos</li>
+    <li>Binaries/configs</li>
+  </ul>
+</section>
+<section>
+  <h2>Artifact Repository @ JTalks</h2>
+  <ul>
+    <li>Each commit is uploaded & deployed</li>
+    <li>Only binaries</li>
+    <li>Non-sensitive</li>
+  </ul>
+</section>
+<section>
+  <h2>Environments @ GD</h2>
+  <ul>
+    <li>Dozens of envs</li>
+    <li>Internal, External, UAT, PROD</li>
+    <li>Everything is virtualized</li>
+    <li>A lot of different vApp templates</li>
+  </ul>
+</section>
+<section>
+  <h2>Environments @ JTalks</h2>
+  <ul>
+    <li>DEV, UAT, PREPROD, PROD</li>
+    <li>Non-virtualized</li>
+  </ul>
+</section>
 <section>
   <section data-state="alert">
     <h2>Global State</h2>

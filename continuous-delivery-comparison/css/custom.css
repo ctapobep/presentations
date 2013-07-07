@@ -26,3 +26,13 @@
     width: 100px;
     height: 100px;
 }
+
+div.general-header {
+  border: 1px solid red;
+  height: 10%;
+}
+
+div.general-content {
+  border: 1px solid;
+  height: 89%;
+}
